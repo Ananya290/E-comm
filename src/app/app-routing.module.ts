@@ -5,12 +5,13 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'seller',component:SellerAuthComponent},
-  {path: 'seller-home', component:SellerHomeComponent},
-  {path: '**', component:PagenotFoundComponent},
+  {path: 'seller-home', component:SellerHomeComponent,canActivate:[authGuard]},
+  {path: '**', component:PagenotFoundComponent },
 ];
 
 @NgModule({

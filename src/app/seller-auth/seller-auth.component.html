@@ -1,5 +1,7 @@
+<div style="background-image: url('assets/backgroundimg.avif'); background-size: cover; background-position: center; min-height: 100vh;">
+
 <div>
-    <div class="container mt-5">
+    <div  *ngIf="!alreadyAccount" class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center mb-4">Seller Sign-Up</h2>
@@ -21,9 +23,32 @@
                     </div>
     
                     <button type="submit" class="btn btn-primary w-100">Sign-Up</button>
+                    <a class="btn btn-link text-primary p-0 m-0" (click)="OpenLogin()">Already have account? Click On Login</a>
                 </form>
             </div>
         </div>
     </div>
     
+    <div *ngIf="alreadyAccount" class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">LOGIN</h2>
+                <form [formGroup]="loginform" (ngSubmit)="login(loginform.value)">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Enter your email">
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" formControlName="password" class="form-control" placeholder="Enter your password">
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary w-100">LOG IN</button>
+                    <a class="btn btn-link text-primary p-0 m-0" (click)="openSignup()">Don't have an account? Click on Sign-up</a>
+                </form>
+            </div>
+        </div>
     </div>
+    </div>
+</div>

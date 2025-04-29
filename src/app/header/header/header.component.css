@@ -1,4 +1,7 @@
 .navbar .nav-link {
     margin-left: 15px;
   }
-  
+  .navbar-nav-seller{
+    padding-left: 860px;
+    display:flex;
+  }

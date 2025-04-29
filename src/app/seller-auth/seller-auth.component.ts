@@ -14,6 +14,8 @@ export class SellerAuthComponent implements OnInit {
   loginform : FormGroup
   data: Object =" ";
   alreadyAccount = false;
+  authError:string = '';
+
 
 
   constructor(private fb : FormBuilder, private SellerService :SellerService, private router :Router){
@@ -42,7 +44,12 @@ export class SellerAuthComponent implements OnInit {
         this.alreadyAccount=false;
       }
   login(data :logIn){
- console.log(data)
+    this.SellerService.userLogin(data)
+    this.SellerService.isLoginerror.subscribe((iserror)=>{
+      if(iserror){
+        this.authError = "Email or Password is incorrect !!!";
+      }
+    })
   }
 
 

@@ -53,6 +53,84 @@
       "username": "Ananya",
       "email": "ananyashukla569@gmail.com",
       "password": "lkjh"
+    },
+    {
+      "id": "be8d",
+      "username": "ananya",
+      "email": "ram@gmail.com",
+      "password": "ram"
+    },
+    {
+      "id": "756c",
+      "username": "shyam@gmail.com",
+      "email": "",
+      "password": "shyam123"
+    }
+  ],
+  "products": [
+    {
+      "id": "4b53",
+      "productName": "IPhone15",
+      "productPrice": "230000",
+      "productColor": "Red",
+      "productDescription": "mobile",
+      "productImg": "https://m.media-amazon.com/images/I/51-dI0OmzyL.jpg"
+    },
+    {
+      "id": "d7fa",
+      "productName": "Samsung",
+      "productPrice": "25000",
+      "productColor": "black",
+      "productDescription": "samsaung mobile with 12 gb ram",
+      "productImg": ""
+    },
+    {
+      "id": "3c1f",
+      "productName": "",
+      "productPrice": "",
+      "productColor": "",
+      "productDescription": "",
+      "productImg": ""
+    },
+    {
+      "id": "8b83",
+      "productName": "",
+      "productPrice": "",
+      "productColor": "",
+      "productDescription": "",
+      "productImg": ""
+    },
+    {
+      "id": "55a4",
+      "productName": "",
+      "productPrice": "",
+      "productColor": "",
+      "productDescription": "",
+      "productImg": ""
+    },
+    {
+      "id": "7dd3",
+      "productName": "",
+      "productPrice": "",
+      "productColor": "",
+      "productDescription": "",
+      "productImg": ""
+    },
+    {
+      "id": "526f",
+      "productName": "",
+      "productPrice": "",
+      "productColor": "",
+      "productDescription": "",
+      "productImg": ""
+    },
+    {
+      "id": "1233",
+      "productName": "",
+      "productPrice": "",
+      "productColor": "",
+      "productDescription": "",
+      "productImg": ""
     }
   ]
 }

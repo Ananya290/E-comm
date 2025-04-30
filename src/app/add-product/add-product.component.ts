@@ -12,7 +12,7 @@ export class AddProductComponent implements OnInit{
   addProductMssg:string|undefined;
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
   constructor(private fb :FormBuilder,private productservice : ProductServiceService){
     this.addProductForm = this.fb.group({

@@ -14,9 +14,14 @@ export class ProductServiceService {
    }
 
   addProductService(data :product){
-   return  this.http.post(this.producturl,data);}
-  
-  
+   return  this.http.post(this.producturl,data);
+  }
+  productList(){
+    return this.http.get<product[]>(this.producturl);
+  }
+  deleteProduct(id:number){
+    return this.http.delete(`http://localhost:3000/products/${id}`)
+  }
   
   
   

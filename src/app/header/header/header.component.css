@@ -5,3 +5,15 @@
     padding-left: 860px;
     display:flex;
   }
+  .welcome-text {
+    color: #000000; /* pinkish */
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px #00000033;
+    transition: color 0.3s ease;
+  }
+  
+  .welcome-text:hover {
+    color: #3eb027; /* purple on hover */
+  }
+  

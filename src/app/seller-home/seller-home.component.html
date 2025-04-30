@@ -1,2 +1,25 @@
-<p>seller-home works!</p>
-<h1>hkjhkjhkjhkj</h1>
+<table>
+    <thead>
+        <strong>{{this.deleteMssg}}</strong>
+        <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Color</th>
+        <th>Product Description</th>
+        <th></th>
+    </tr></thead>
+    <tbody>
+       <tr *ngFor = "let item of productLists">
+        <td><img src="{{item.productImg}}" alt=" " class="productImg"></td>
+        <td>{{item.productName}}</td>
+        <td>{{item.productPrice}}</td>
+        <td>{{item.productColor}}</td>
+        <td>{{item.productDescription}}</td>
+        <td><button>Edit</button>
+        <button class="btn btn-sucess" (click)="deleteProducts(item.id)">Delete</button></td>
+ 
+       </tr>
+    </tbody>
+   
+</table>

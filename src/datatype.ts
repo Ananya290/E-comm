@@ -12,7 +12,8 @@ export interface logIn{
 }
 
 export interface product{
-        productName :string,
+          id:number,
+          productName :string,
           productPrice:number,
           productColor:string,
           productDescription:string,

@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
-    <div class="navbar-brand fw-bold"><a  class="routerLink" routerLink="/">E-COMMERCE</a></div>
+    <div class="navbar-brand fw-bold"><a  class="nav-link" routerLink="/">E-COMMERCE</a></div>
     
     <div class="d-flex align-items-center ms-auto me-3" *ngIf="menuType === 'default'" >
       <input type="text" class="form-control me-2" placeholder="Search the product" style="width: 200px;">
@@ -8,16 +8,20 @@
     </div>
     <div [ngSwitch]="menuType">
       <div class="navbar-nav" *ngSwitchCase="'default'">
-        <a class="" routerLink="">Home</a><br>
-        <a class="seller" routerLink="seller">Seller</a>
+        <a class="nav-link" routerLink="">Home</a><br>
+        <a class="nav-link" routerLink="seller">Seller</a>
         <a class="nav-link" routerLink="#">Login</a>
         <a class="nav-link" routerLink="#">Cart(0)</a>
+        <a class="nav-link" routerLink="#"> {{ formattedDate | date:'MMM d' }} </a>
+
       </div>
       <div class="navbar-nav-seller"  *ngSwitchCase="'seller'">
         <a class="nav-link" routerLink="seller-add-product">Add Product</a><br>
         <a class="nav-link" routerLink="seller-product-list">List</a>
         <a class="nav-link" (click)="logout()">Logout</a>
-        <a class="nav-link" routerLink="#">WELCOME + {{this.sellerName}} + TIME</a>
+        <a class="nav-link welcome-text" routerLink="#">Welcome {{this.sellerName | uppercase}} </a>
+        <a class="nav-link" routerLink="#"> {{ formattedDate | date:'MMM d' }} </a>
+
       </div>
     </div>
     

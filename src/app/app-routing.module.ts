@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'seller-home', component:SellerHomeComponent,canActivate:[authGuard]},
   {path:'seller-add-product',component:AddProductComponent,canActivate:[authGuard]},
   {path:'seller-product-list',component:ProductListComponent,canActivate:[authGuard]},
+  {path:'seller-add-product/:id',component:AddProductComponent,canActivate:[authGuard]},
   {path: '**', component:PagenotFoundComponent },
 ];
 

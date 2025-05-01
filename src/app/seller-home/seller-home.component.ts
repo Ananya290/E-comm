@@ -30,5 +30,8 @@ deleteMssg:string |undefined;
     setTimeout(()=>this.deleteMssg=undefined , 3000)
   })
  }
+ editProduct(id:number){
+ console.log(id)
+ }
 
 }

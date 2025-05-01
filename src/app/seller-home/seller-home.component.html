@@ -1,25 +1,47 @@
-<table>
-    <thead>
-        <strong>{{this.deleteMssg}}</strong>
-        <tr>
-        <th>Image</th>
-        <th>Product Name</th>
-        <th>Product Price</th>
-        <th>Product Color</th>
-        <th>Product Description</th>
-        <th></th>
-    </tr></thead>
-    <tbody>
-       <tr *ngFor = "let item of productLists">
-        <td><img src="{{item.productImg}}" alt=" " class="productImg"></td>
-        <td>{{item.productName}}</td>
-        <td>{{item.productPrice}}</td>
-        <td>{{item.productColor}}</td>
-        <td>{{item.productDescription}}</td>
-        <td><button>Edit</button>
-        <button class="btn btn-sucess" (click)="deleteProducts(item.id)">Delete</button></td>
- 
-       </tr>
-    </tbody>
-   
-</table>
+<div class="container mt-5">
+    <div class="alert alert-info text-center" *ngIf="deleteMssg">
+      <strong>{{ this.deleteMssg }}</strong>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle shadow-sm">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Color</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of productLists" class="text-center">
+            <td>
+              <img [src]="item.productImg" routerLink="/" alt="Product" class="img-thumbnail" style="width: 80px; height: auto;" />
+            </td>
+            <td>{{ item.productName | titlecase }}</td>
+            <td><i class="fas fa-dollar-sign text-success"></i> {{ item.productPrice }}</td>
+            <td>{{ item.productColor | titlecase }}</td>
+            <td>{{ item.productDescription | titlecase }}</td>
+            <td>
+              <button
+                class="btn btn-sm btn-outline-primary me-2"
+                [routerLink]="'/seller-add-product/' + item.id"
+                (click)="editProduct(item.id)"
+                title="Edit Product">Edit
+              </button>
+              <button
+                class="btn btn-sm btn-outline-danger"
+                (click)="deleteProducts(item.id)"
+                title="Delete Product"
+              >
+               Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

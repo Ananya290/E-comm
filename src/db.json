@@ -25,43 +25,19 @@
       "password": "shyam123"
     },
     {
-      "id": "b241",
-      "username": "",
-      "email": "",
-      "password": "mkjbh"
-    },
-    {
-      "id": "c8d0",
-      "username": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "2760",
-      "username": "",
-      "email": "",
-      "password": ""
-    },
-    {
       "id": "a908",
       "username": ".lkjhgjnm",
       "email": "lkjhgf@gmail.com",
       "password": ",lkjhbgvvbnm"
     },
     {
-      "id": "fcb2",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": "lkjh"
-    },
-    {
-      "id": "be8d",
-      "username": "ananya",
-      "email": "ram@gmail.com",
-      "password": "ram"
-    },
-    {
       "id": "756c",
+      "username": "shyam@gmail.com",
+      "email": "",
+      "password": "shyam123"
+    },
+    {
+      "id": "bc38",
       "username": "shyam@gmail.com",
       "email": "",
       "password": "shyam123"
@@ -69,28 +45,44 @@
   ],
   "products": [
     {
-      "id": "4b53",
       "productName": "IPhone15",
       "productPrice": "230000",
       "productColor": "Red",
       "productDescription": "mobile",
-      "productImg": "https://m.media-amazon.com/images/I/51-dI0OmzyL.jpg"
+      "productImg": "https://m.media-amazon.com/images/I/51-dI0OmzyL.jpg",
+      "id": "4b53"
     },
     {
-      "id": "d7fa",
       "productName": "Samsung",
-      "productPrice": "25000",
+      "productPrice": "27000",
       "productColor": "black",
-      "productDescription": "samsaung mobile with 12 gb ram",
+      "productDescription": "samsaung",
+      "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*",
+      "id": "d7fa"
+    },
+    {
+      "productName": "IPhone15 pro max",
+      "productPrice": "100000",
+      "productColor": "Red",
+      "productDescription": "mobile",
+      "productImg": "https://m.media-amazon.com/images/I/51-dI0OmzyL.jpg",
+      "id": "3f08"
+    },
+    {
+      "id": "7e1c",
+      "productName": "Samsung s23",
+      "productPrice": "34000",
+      "productColor": "black",
+      "productDescription": "samsung",
       "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*"
     },
     {
-      "id": "3f08",
-      "productName": "IPhone15",
-      "productPrice": "230000",
-      "productColor": "Red",
+      "id": "a4d8",
+      "productName": "Samsung s24",
+      "productPrice": "39000",
+      "productColor": "blue",
       "productDescription": "mobile",
-      "productImg": "https://m.media-amazon.com/images/I/51-dI0OmzyL.jpg"
+      "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*"
     }
   ]
 }

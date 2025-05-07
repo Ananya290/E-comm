@@ -45,12 +45,12 @@
   ],
   "products": [
     {
-      "productName": "IPhone15",
-      "productPrice": "230000",
-      "productColor": "Red",
-      "productDescription": "mobile",
-      "productImg": "https://m.media-amazon.com/images/I/51-dI0OmzyL.jpg",
-      "id": "4b53"
+      "id": "c5b5",
+      "productName": "Samsung Galaxy M05",
+      "productPrice": "6,249",
+      "productColor": "Blue",
+      "productDescription": "Mobile",
+      "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
       "productName": "Samsung",
@@ -77,12 +77,68 @@
       "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*"
     },
     {
-      "id": "a4d8",
       "productName": "Samsung s24",
       "productPrice": "39000",
+      "productColor": "Purple",
+      "productDescription": "mobile",
+      "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*",
+      "id": "a4d8"
+    },
+    {
+      "id": "56ae",
+      "productName": "motorolla",
+      "productPrice": "530000",
       "productColor": "blue",
       "productDescription": "mobile",
-      "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*"
+      "productImg": "https://5.imimg.com/data5/SELLER/Default/2021/9/WI/ZP/XB/58263536/motorola-smart-phone-1000x1000.jpg"
+    },
+    {
+      "id": "7e70",
+      "productName": "VIVO",
+      "productPrice": "230000",
+      "productColor": "Red",
+      "productDescription": "mobile",
+      "productImg": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1553068151421/87e4e0fb7074e4434b3e2b9b71ba4c06.png"
+    },
+    {
+      "id": "80f8",
+      "productName": "Vivo",
+      "productPrice": "23000",
+      "productColor": "Blue",
+      "productDescription": "mobile",
+      "productImg": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1702887084128/9d1807c36c96bfa95db67591ddb3ac95.png"
+    },
+    {
+      "id": "80f8",
+      "productName": "Vivo",
+      "productPrice": "23000",
+      "productColor": "Blue",
+      "productDescription": "mobile",
+      "productImg": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1702887084128/9d1807c36c96bfa95db67591ddb3ac95.png"
+    },
+    {
+      "id": "6734",
+      "productName": "VIVO",
+      "productPrice": "230000",
+      "productColor": "Red",
+      "productDescription": "mobile",
+      "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": "7121",
+      "productName": "Samsung Galaxy M05",
+      "productPrice": "6,249",
+      "productColor": "Blue",
+      "productDescription": "Mobile",
+      "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": "c5b5",
+      "productName": "Samsung Galaxy M05",
+      "productPrice": "6,249",
+      "productColor": "Blue",
+      "productDescription": "Mobile",
+      "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg"
     }
   ]
 }

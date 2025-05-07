@@ -44,18 +44,20 @@ export class AddProductComponent implements OnInit{
 if(this.productId){
   this.productservice.updateProduct(this.productId,data).subscribe((result)=>{
    this.addProductMssg = "Product Updated Successfully !!"
-   this.addProductForm.reset();
   })
   setTimeout(()=> this.addProductMssg=undefined,3000)
+  this.addProductForm.reset();
+
   this.router.navigate(['/seller-home'])
 }
 else{
   this.productservice.addProductService(data).subscribe((result)=>{
     if(result){
       this.addProductMssg = "Product is added Successfully!"
-       this.addProductForm.reset();
     }
     setTimeout(()=>this.addProductMssg = undefined,3000)  
+    this.addProductForm.reset();
+
     })
      this.router.navigate(['/seller-home'])
 

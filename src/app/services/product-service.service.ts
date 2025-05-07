@@ -28,6 +28,12 @@ export class ProductServiceService {
   updateProduct(id :string ,product :product){
     return this.http.put<product>(`http://localhost:3000/products/${id}`,product)
   }
+  popularProduct(){
+    return this.http.get<product[]>(`http://localhost:3000/products?_limit=3`)
+  }
+  trendyProduct(){
+    return this.http.get<product[]>(`http://localhost:3000/products?_limit=8`)
+  }
   
   
   

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { product } from '../../datatype';
 import { log } from 'console';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +35,15 @@ export class ProductServiceService {
   trendyProduct(){
     return this.http.get<product[]>(`http://localhost:3000/products?_limit=8`)
   }
-  
+  searchProducts(query: string) {
+ 
+    return this.http.get<product[]>(this.producturl).pipe(map((products: product[]): product[] =>products.filter((p: product) =>
+       p.productName?.toLowerCase().includes(query.toLowerCase())
+      )
+      )
+    );
+  }
+
   
   
   

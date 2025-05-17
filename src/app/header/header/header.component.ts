@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { log } from 'console';
+import { ProductServiceService } from '../../services/product-service.service';
+import { product } from '../../../datatype';
 
 @Component({
   selector: 'app-header',
@@ -11,8 +13,9 @@ export class HeaderComponent implements OnInit {
 menuType:string = 'default';
 sellerName :string = "";
 send_date = new Date();
-formattedDate:string|undefined
-constructor(private router : Router){}
+formattedDate:string|undefined;
+searchResult : undefined |product[] 
+constructor(private router : Router,private productService :ProductServiceService){}
 
   ngOnInit(): void {
     this.send_date.setMonth(this.send_date.getMonth());
@@ -41,5 +44,21 @@ constructor(private router : Router){}
       localStorage.removeItem('seller')
       this.router.navigate(['/'])
   }
+  searchProduct(e: KeyboardEvent) {
+    if (e) {
+      let element = e.target as HTMLInputElement;
+      console.log(element.value);
+      this.productService.searchProducts(element.value).subscribe((result) => {
+        // Show only 5 most matching elements
+        this.searchResult = result.slice(0, 5);
+        console.log(this.searchResult);
+      });
+    }
+  }
+   hideAutoSuggestion(){
+    this.searchResult = undefined;
+  }
+  }
+ 
 
-}
+

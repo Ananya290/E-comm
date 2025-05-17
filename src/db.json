@@ -41,6 +41,48 @@
       "username": "shyam@gmail.com",
       "email": "",
       "password": "shyam123"
+    },
+    {
+      "id": "fe03",
+      "username": "shyam@gmail.com",
+      "email": "shyam@gmail.com",
+      "password": "shyam123"
+    },
+    {
+      "id": "87be",
+      "username": "shyam@gmail.com",
+      "email": "ram@gmail.com",
+      "password": "ram"
+    },
+    {
+      "id": "65a5",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": "ananya"
+    },
+    {
+      "id": "28ed",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": "ananya"
+    },
+    {
+      "id": "669b",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": "aa"
+    },
+    {
+      "id": "e31b",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": "ananya"
+    },
+    {
+      "id": "c7ad",
+      "username": "llklk",
+      "email": "mmm@gmail.com",
+      "password": "mlkmk"
     }
   ],
   "products": [
@@ -99,14 +141,6 @@
       "productColor": "Red",
       "productDescription": "mobile",
       "productImg": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1553068151421/87e4e0fb7074e4434b3e2b9b71ba4c06.png"
-    },
-    {
-      "id": "80f8",
-      "productName": "Vivo",
-      "productPrice": "23000",
-      "productColor": "Blue",
-      "productDescription": "mobile",
-      "productImg": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1702887084128/9d1807c36c96bfa95db67591ddb3ac95.png"
     },
     {
       "id": "80f8",

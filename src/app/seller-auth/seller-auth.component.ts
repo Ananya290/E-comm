@@ -14,29 +14,35 @@ export class SellerAuthComponent implements OnInit {
   loginform : FormGroup
   data: Object =" ";
   alreadyAccount = false;
-  authError:string = '';
-
+  authError:undefined | string ;
+  signupSuccess: undefined | string ;
 
 
   constructor(private fb : FormBuilder, private SellerService :SellerService, private router :Router){
     this.signupform = this.fb.group({
-    username:['', Validators.required],
-    email:['', Validators.required],
-    password:['', Validators.required],
-
-    })
+      username: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
     this.loginform = this.fb.group({
-      email:['', Validators.required],
-      password:['', Validators.required],
-    })
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
   }
+   
+  
 
   ngOnInit(): void {  
     this.SellerService.reloadSeller();          
   }
   signUp(data:SignUp): void {
     this.SellerService.userSignUp(data)
-      }
+if(data){
+   this.signupSuccess = "SignUp Successfull";
+}  
+    setTimeout(()=>this.signupSuccess=undefined , 1000)
+    this.signupform.reset();
+  }
   OpenLogin(){
        this.alreadyAccount =true;
       }
@@ -50,6 +56,13 @@ export class SellerAuthComponent implements OnInit {
         this.authError = "Email or Password is incorrect !!!";
       }
     })
+    setTimeout(()=>this.authError=undefined , 3000)
+    this.SellerService.SellerDataError.subscribe((iserror)=>{
+      if(iserror){
+        this.authError = "Email or Password is missing !!!";
+      }
+    })
+
   }
 
 

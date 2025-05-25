@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SeacrhComponent } from './seacrh/seacrh.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     SellerHomeComponent,
     AddProductComponent,
     ProductListComponent,
+    SeacrhComponent,
   
  
   ],

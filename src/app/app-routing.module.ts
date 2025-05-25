@@ -8,6 +8,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { authGuard } from './auth.guard';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SeacrhComponent } from './seacrh/seacrh.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'seller-add-product',component:AddProductComponent,canActivate:[authGuard]},
   {path:'seller-product-list',component:ProductListComponent,canActivate:[authGuard]},
   {path:'seller-add-product/:id',component:AddProductComponent,canActivate:[authGuard]},
+  {path:'search/:query',component:SeacrhComponent},
   {path: '**', component:PagenotFoundComponent },
 ];
 

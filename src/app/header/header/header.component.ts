@@ -58,7 +58,8 @@ constructor(private router : Router,private productService :ProductServiceServic
    hideAutoSuggestion(){
     this.searchResult = undefined;
   }
+  searchItem(val: string) {
+    console.log(val);
+    this.router.navigate(['/search', val])
   }
- 
-
-
+}

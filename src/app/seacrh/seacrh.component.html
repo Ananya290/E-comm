@@ -1,0 +1,20 @@
+<div *ngIf="searchResult && searchResult.length > 0" class="container">
+  <div class="row">
+    <div *ngFor="let product of searchResult" class="col-md-6 col-lg-4 mb-4">
+      <div class="card h-100 shadow-sm">
+<img 
+  [src]="product.productImg" 
+  alt="{{product.productName}}" 
+  class="card-img-top mx-auto d-block"
+  style="height:200px; width:100%; object-fit:contain; object-position:center; background:#f8f9fa;">       <div class="card-body">
+          <h5 class="card-title">{{ product.productName }}</h5>
+          <p class="card-text">{{ product.productDescription }}</p>
+          <p class="card-text fw-bold text-primary">Price: {{ product.productPrice | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="searchResult && searchResult.length === 0" class="alert alert-warning mt-4">
+  No products found.
+</div>

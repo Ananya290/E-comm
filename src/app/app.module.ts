@@ -13,6 +13,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SeacrhComponent } from './seacrh/seacrh.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { SeacrhComponent } from './seacrh/seacrh.component';
     AddProductComponent,
     ProductListComponent,
     SeacrhComponent,
+    FooterComponent,
   
  
   ],

@@ -15,16 +15,17 @@ export class SeacrhComponent implements OnInit {
   constructor(private activeRoute :ActivatedRoute , private productService : ProductServiceService) { }
 
   ngOnInit(): void {
-    let query = this.activeRoute.snapshot.paramMap.get('query')
+//    
+this.activeRoute.paramMap.subscribe(params => {
+    const query = params.get('query');
     console.log(query);
-     if (query) {
-      this.productService.searchProducts(query).subscribe((result)=>{
+    if (query) {
+      this.productService.searchProducts(query).subscribe((result) => {
         this.searchResult = result;
-        console.log(this.searchResult , "search result");
-      })
+        console.log(this.searchResult, "search result");
+      });
     }
-
-
+  });
 }
 }
   // This component is used to display search results based on the query parameter

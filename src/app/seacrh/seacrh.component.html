@@ -2,14 +2,15 @@
   <div class="row g-4">
     <div *ngFor="let product of searchResult" class="col-12 col-sm-6 col-md-4">
       <div class="card h-100 shadow-sm">
-        <img 
+<a routerLink="/details/{{product.id}}">        <img 
           [src]="product.productImg" 
           alt="{{product.productName}}" 
           class="card-img-top"
-          style="height:200px; width:100%; object-fit:contain; object-position:center; background:#f8f9fa;">
+          style="height:200px; width:100%; object-fit:contain; object-position:center; background:#f8f9fa;"></a>
         <div class="card-body">
-          <h5 class="card-title">{{ product.productName }}</h5>
-          <p class="card-text">{{ product.productDescription }}</p>
+<a routerLink="/details/{{product.id}}"><h5 class="card-title">{{ product.productName }}</h5>
+</a>         
+ <p class="card-text">{{ product.productDescription }}</p>
           <p class="card-text fw-bold text-primary">Price: {{ product.productPrice | currency }}</p>
         </div>
       </div>

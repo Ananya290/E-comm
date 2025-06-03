@@ -12,6 +12,7 @@ import { product } from '../../../datatype';
 export class HeaderComponent implements OnInit {
 menuType:string = 'default';
 sellerName :string = "";
+userName :string = " ";
 send_date = new Date();
 formattedDate:string|undefined;
 searchResult : undefined |product[] 
@@ -28,9 +29,22 @@ constructor(private router : Router,private productService :ProductServiceServic
              if(localStorage.getItem('seller')){
             let sellerStore = localStorage.getItem('seller');
             let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-            this.sellerName = sellerData.username;
-             
+            console.log(sellerData,"sellerData");
+            
+            this.sellerName = sellerData.username;     
         }   
+        }
+        else if(localStorage.getItem('user') && val.url.includes('user')){
+          this.menuType='user';
+          if(localStorage.getItem('user')){
+            let userStore = localStorage.getItem('user');
+            console.log(userStore , "userstore");
+            let userData = userStore && JSON.parse(userStore);
+            console.log(userData,"userData")
+            this.userName = userData.username;
+            console.log(this.userName);
+            
+          }
         }
         else{
           this.menuType='default';
@@ -43,6 +57,11 @@ constructor(private router : Router,private productService :ProductServiceServic
   logout(){
       localStorage.removeItem('seller')
       this.router.navigate(['/'])
+  }
+  userlogout(){
+    localStorage.removeItem('user')
+    console.log("userlogut done successfully")
+    this.router.navigate(['/'])
   }
   searchProduct(e: KeyboardEvent) {
     if (e) {

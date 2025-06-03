@@ -15,6 +15,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { SeacrhComponent } from './seacrh/seacrh.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductComponent } from './product/product.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ProductComponent } from './product/product.component';
     SeacrhComponent,
     FooterComponent,
     ProductComponent,
+    UserAuthComponent,
   
  
   ],

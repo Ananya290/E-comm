@@ -83,6 +83,12 @@
       "username": "llklk",
       "email": "mmm@gmail.com",
       "password": "mlkmk"
+    },
+    {
+      "id": "567a",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": "ananya"
     }
   ],
   "products": [
@@ -173,6 +179,44 @@
       "productColor": "Blue",
       "productDescription": "Mobile",
       "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg"
+    }
+  ],
+  "user": [
+    {
+      "id": "99b1",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": " mphasis"
+    },
+    {
+      "id": "4a3d",
+      "username": "shyam",
+      "email": "shyam@gmail.com",
+      "password": " shyam123"
+    },
+    {
+      "id": "0729",
+      "username": "ram",
+      "email": "ram@gamil.com",
+      "password": " ram123"
+    },
+    {
+      "id": "fff4",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": " ananya"
+    },
+    {
+      "id": "bb85",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": " ananya"
+    },
+    {
+      "id": "9441",
+      "username": "Ananya",
+      "email": "ananyashukla569@gmail.com",
+      "password": " ananya"
     }
   ]
 }

@@ -17,8 +17,8 @@ export class SellerService{
   userSignUp(data :SignUp){
     return this.http.post(this.sellerUrl,data,{observe :'response'}).subscribe((result)=>{
           this.isSellerLoggedIn.next(true);
-          // localStorage.setItem('seller',JSON.stringify(result.body))
-          // this.router.navigate(['seller-home']);
+          localStorage.setItem('seller',JSON.stringify(result.body))
+          this.router.navigate(['seller-home']);
       
     })
   }

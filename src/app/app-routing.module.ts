@@ -10,6 +10,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SeacrhComponent } from './seacrh/seacrh.component';
 import { ProductComponent } from './product/product.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'seller-add-product/:id',component:AddProductComponent,canActivate:[authGuard]},
   {path:'search/:query',component:SeacrhComponent},
   {path:'details/:query',component:ProductComponent},
+  {path:'user-auth',component:UserAuthComponent},
   {path: '**', component:PagenotFoundComponent },
 ];
 

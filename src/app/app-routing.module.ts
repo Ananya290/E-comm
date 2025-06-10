@@ -11,11 +11,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { SeacrhComponent } from './seacrh/seacrh.component';
 import { ProductComponent } from './product/product.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { userauthguardGuard } from './userauthguard.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'seller',component:SellerAuthComponent},
-  {path: 'seller-home', component:SellerHomeComponent,canActivate:[authGuard]},
+  {path: 'seller-home', component:SellerHomeComponent,canActivate:[authGuard], },
   {path:'seller-add-product',component:AddProductComponent,canActivate:[authGuard]},
   {path:'seller-product-list',component:ProductListComponent,canActivate:[authGuard]},
   {path:'seller-add-product/:id',component:AddProductComponent,canActivate:[authGuard]},

@@ -10,6 +10,7 @@ import { SignUp } from '../../datatype';
 })
 export class UserAuthComponent implements OnInit {
   userSignupForm!:FormGroup;
+  
 constructor(private fb: FormBuilder , private userService :UserserviceService){
   this.userSignupForm = this.fb.group({
     username :['',Validators.required],
@@ -18,8 +19,10 @@ constructor(private fb: FormBuilder , private userService :UserserviceService){
   })
 
 }
-  ngOnInit(): void {
+ ngOnInit(): void {
+    this.userService.reloaduser();
   }
+ 
   SignUp(data:SignUp){
     this.userService.userSignUp(data);
 }

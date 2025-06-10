@@ -10,7 +10,7 @@
           <h5 class="text-success fw-bold mb-4">₹{{productData.productPrice}}</h5>
           <div class="d-flex gap-2 mb-3">
             <button class="btn btn-outline-primary" (click)="min()">-</button>
-            <input type="text" class="form-control text-center" value="{{this.quantity}}" style="width: 50px;" readonly>
+            <input type="text" #value class="form-control text-center" value="{{this.quantity}}" style="width: 50px;" readonly>
             <button class="btn btn-outline-primary" (click)="add()">+</button>
           </div>
           <div class="d-flex gap-3 w-100">

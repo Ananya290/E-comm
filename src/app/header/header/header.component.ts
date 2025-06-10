@@ -19,13 +19,14 @@ searchResult : undefined |product[]
 constructor(private router : Router,private productService :ProductServiceService){}
 
   ngOnInit(): void {
+    console.log(this.menuType , " where is the menu type");
     this.send_date.setMonth(this.send_date.getMonth());
     this.formattedDate=this.send_date.toISOString().slice(0,10); 
     this.router.events.subscribe((val:any)=>{
       if(val.url){
         if(localStorage.getItem('seller') && val.url.includes('seller')){
           this.menuType='seller';
-          console.log(this.menuType)
+          console.log(this.menuType , "menu type is seller");
              if(localStorage.getItem('seller')){
             let sellerStore = localStorage.getItem('seller');
             let sellerData = sellerStore && JSON.parse(sellerStore)[0];
@@ -34,8 +35,9 @@ constructor(private router : Router,private productService :ProductServiceServic
             this.sellerName = sellerData.username;     
         }   
         }
-        else if(localStorage.getItem('user') && val.url.includes('user')){
+        else if(localStorage.getItem('user')){
           this.menuType='user';
+          console.log(this.menuType , "menu type is user");
           if(localStorage.getItem('user')){
             let userStore = localStorage.getItem('user');
             console.log(userStore , "userstore");
@@ -56,6 +58,7 @@ constructor(private router : Router,private productService :ProductServiceServic
   
   logout(){
       localStorage.removeItem('seller')
+      console.log("sellerlogout done successfully")
       this.router.navigate(['/'])
   }
   userlogout(){

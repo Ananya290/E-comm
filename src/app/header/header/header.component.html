@@ -15,12 +15,13 @@
   
   <div [ngSwitch]="menuType">
     <div class="navbar-nav" *ngSwitchCase="'default'">
-      <a class="nav-link text-light" routerLink="">Home</a>
+      <a class="nav-link text-light" routerLink="seller-home">Home</a>
       <a class="nav-link text-light" routerLink="seller">Seller</a>
       <a class="nav-link text-light" routerLink="user-auth">Login/SignUp</a>
       <a class="nav-link text-light" routerLink="#">Cart(0)</a>
       <a class="nav-link text-light" routerLink="#">{{ formattedDate | date:'MMM d' }}</a>
     </div>
+
     <div class="navbar-nav-seller" *ngSwitchCase="'seller'">
       <a class="nav-link text-light" routerLink="seller-add-product">Add Product</a>
       <a class="nav-link text-light" routerLink="seller-product-list">List</a>

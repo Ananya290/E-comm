@@ -30,9 +30,7 @@ export class SellerAuthComponent implements OnInit {
     });
   }
    
-  
-
-  ngOnInit(): void {  
+ ngOnInit(): void {  
     this.SellerService.reloadSeller();          
   }
   signUp(data:SignUp): void {

@@ -1,8 +1,10 @@
-/* Make the footer fixed at the bottom of the viewport */
+/* Make the header fixed at the top of the viewport */
 :host {
   position: fixed;
+  top: 0;
   left: 0;
-  bottom: 0;
   width: 100vw;
   z-index: 100;
 }
+
+

@@ -1,9 +1,65 @@
-<div>
-    <form [formGroup]="userSignupForm" (submit)="SignUp(userSignupForm.value)" >
-       <input type="text" name = "username" placeholder="Enter Username" formControlName="username" required>
-       <input type="email" name = "email" placeholder="Enter Email" formControlName="email" required>
-       <input type="text" name="password" placeholder="Enter Password" formControlName="password" required>
-       <button>SignUp</button>
-    </form>
-    
+<div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 100vh; max-width: 100vw; padding: 0;">
+  <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; margin: 40px 0;">
+    <h2 class="text-center mb-4 text-primary-emphasis">Welcome to E-comm</h2>
+    <p class="text-center text-secondary mb-4">Create your account or login to start shopping the best products!</p>
+    <div *ngIf="!isuseraccount">
+      <form [formGroup]="userSignupForm" (submit)="SignUp(userSignupForm.value)">
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control" name="username" placeholder="Enter Username" formControlName="username" required>
+          <div *ngIf="userSignupForm.get('username')?.invalid && userSignupForm.get('username')?.touched" class="text-danger">
+            Username is required.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter Email" formControlName="email" required>
+          <div *ngIf="userSignupForm.get('email')?.invalid && userSignupForm.get('email')?.touched" class="text-danger">
+            Email is required.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="text" class="form-control" name="password" placeholder="Enter Password" formControlName="password" required>
+          <div *ngIf="userSignupForm.get('password')?.invalid && userSignupForm.get('password')?.touched" class="text-danger">
+            Password is required.
+          </div>
+        </div>
+        <div class="mb-3 d-flex gap-3">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="includeNumbers" [checked]="includeNumbers" (change)="handleIncludeNumbersChange($event)">
+            <label class="form-check-label" for="includeNumbers">Include Numbers</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="includeCharacters" [checked]="includeCharacters" (change)="handleIncludeCharactersChange($event)">
+            <label class="form-check-label" for="includeCharacters">Include Characters</label>
+          </div>
+        </div>
+        <button class="btn btn-primary w-100 mb-2" [disabled]="userSignupForm.invalid || !userSignupForm.touched">Sign Up</button>
+      </form>
+      <div class="text-center mt-2">
+        <a class="text-decoration-none text-primary" (click)="hideSignUp()">Already have an account? <b>Login</b></a>
+      </div>
+    </div>
+    <div *ngIf="isuseraccount">
+      <form [formGroup]="userLoginForm" (submit)="userlogin(userLoginForm.value)">
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter Email" formControlName="email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="text" class="form-control" name="password" placeholder="Enter Password" formControlName="password" required>
+        </div>
+        <button class="btn btn-success w-100 mb-2" >Login</button>
+      </form>
+      <div class="text-center mt-2">
+        <a class="text-decoration-none text-success" (click)="hideLogin()">Don't have an account? <b>Sign Up</b></a>
+      </div>
+    </div>
+  </div>
+  <div class="position-absolute top-0 start-0 w-100 text-center mt-4" style="pointer-events: none;">
+    <h1 class="display-3 fw-bold text-white opacity-25">E-comm</h1>
+    <p class="lead text-white opacity-50">Your one-stop shop for everything!</p>
+  </div>
 </div>

@@ -1,0 +1,10 @@
+/* Prevent main content from being hidden behind the fixed footer */
+.main-content {
+  padding-bottom: 30px; /* Adjust this value to match your footer's height */
+}
+
+/* Add top padding to main-content to prevent overlap with fixed header */
+.main-content {
+ /* Adjust this value to match your header's height */
+  padding-bottom: 60px; /* Already set for footer */
+}

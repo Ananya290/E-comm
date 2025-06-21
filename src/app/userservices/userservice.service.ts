@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { logIn, SignUp } from '../../datatype';
+import { cart, logIn, SignUp } from '../../datatype';
 import { log } from 'console';
 import { HttpClient } from '@angular/common/http';
 import { Route, Router } from '@angular/router';
@@ -49,4 +49,5 @@ reloaduser(){
     this.router.navigate(['/']);
   }
 }
+
 }

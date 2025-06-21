@@ -16,6 +16,7 @@ userName :string = " ";
 send_date = new Date();
 formattedDate:string|undefined;
 searchResult : undefined |product[] 
+cartItem = 0;
 constructor(private router : Router,private productService :ProductServiceService){}
 
   ngOnInit(): void {
@@ -43,7 +44,7 @@ constructor(private router : Router,private productService :ProductServiceServic
             console.log(userStore , "userstore");
             let userData = userStore && JSON.parse(userStore);
             console.log(userData,"userData")
-            this.userName = userData.username;
+            this.userName = userData[0].username;
             console.log(this.userName);
             
           }
@@ -53,8 +54,17 @@ constructor(private router : Router,private productService :ProductServiceServic
         }
       }
      
-    })   
+    })  
+    
+    let cartData = localStorage.getItem('localCart')
+    if(cartData){
+      this.cartItem = JSON.parse(cartData).length
+    }
+    this.productService.cartData.subscribe((items)=>{
+      this.cartItem = items.length;
+    })
   }
+
   
   logout(){
       localStorage.removeItem('seller')

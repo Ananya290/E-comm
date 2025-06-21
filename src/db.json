@@ -183,100 +183,26 @@
   ],
   "user": [
     {
-      "id": "99b1",
       "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " mphasis"
+      "email": "a@gmail.com",
+      "password": "a1",
+      "id": 1
     },
     {
-      "id": "4a3d",
-      "username": "shyam",
-      "email": "shyam@gmail.com",
-      "password": " shyam123"
-    },
-    {
-      "id": "0729",
-      "username": "ram",
-      "email": "ram@gamil.com",
-      "password": " ram123"
-    },
-    {
-      "id": "fff4",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "bb85",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "9441",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "ddac",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "6e3d",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "9d22",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "773c",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "8683",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "44a6",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "b37c",
-      "username": "Ananya",
-      "email": "ananyashukla569@gmail.com",
-      "password": " ananya"
-    },
-    {
-      "id": "c953",
-      "username": "vaishnavi",
-      "email": "ananyashukla569@gmail.com",
-      "password": " mphasis"
-    },
-    {
-      "id": "0593",
-      "username": "vaishnavi",
-      "email": "ananyashukla569@gmail.com",
-      "password": " vaishnavi"
-    },
-    {
-      "id": "edbc",
-      "username": "",
-      "email": "",
-      "password": "t&%rr*j"
+      "username": "ananya",
+      "email": "ananya@gmail.com",
+      "password": "ananya",
+      "id": 2
     }
-  ]
+  ],
+  "cart": {
+    "productName": "Samsung Galaxy M05",
+    "productPrice": "6,249",
+    "productColor": "Blue",
+    "productDescription": "Mobile",
+    "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg",
+    "productquantity": 5,
+    "userId": 2,
+    "productId": "c5b5"
+  }
 }

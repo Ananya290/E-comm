@@ -18,7 +18,7 @@
       <a class="nav-link text-light" routerLink="seller-home">Home</a>
       <a class="nav-link text-light" routerLink="seller">Seller</a>
       <a class="nav-link text-light" routerLink="user-auth">Login/SignUp</a>
-      <a class="nav-link text-light" routerLink="#">Cart(0)</a>
+      <a class="nav-link text-light" routerLink="#">Cart({{cartItem}})</a>
       <a class="nav-link text-light" routerLink="#">{{ formattedDate | date:'MMM d' }}</a>
     </div>
 
@@ -31,7 +31,7 @@
     </div>
     <div class="navbar-nav-use d-flex" *ngSwitchCase="'user'">
       <a class="nav-link text-light" routerLink="user-product-list">Product List</a>
-      <a class="nav-link text-light" routerLink="user-cart">Cart</a>
+      <a class="nav-link text-light" routerLink="user-cart">Cart({{cartItem}})</a>
       <a class="nav-link text-light" (click)="userlogout()">Logout</a>
       <a class="nav-link text-light welcome-text" routerLink="#">Welcome {{ this.userName | uppercase }}</a>
       <a class="nav-link text-light" routerLink="#">{{ formattedDate | date:'MMM d' }}</a>

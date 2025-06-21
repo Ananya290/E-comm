@@ -26,7 +26,7 @@ export class UserAuthComponent implements OnInit {
       password:['',Validators.required]
     })
     this.userLoginForm = this.fb.group({
-      email :['' , Validators.required, Validators.email],
+      email :['' ,[ Validators.required, Validators.email]],
       password:['', Validators.required]
     })
     this.userService.reloaduser();

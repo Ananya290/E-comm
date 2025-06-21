@@ -14,8 +14,9 @@
             <button class="btn btn-outline-primary" (click)="add()">+</button>
           </div>
           <div class="d-flex gap-3 w-100">
-            <button class="btn btn-primary flex-fill">Add to Cart</button>
-            <button class="btn btn-success flex-fill">Buy Now</button>
+            <button *ngIf="!removeCart" class="btn btn-primary flex-fill" (click)="AddToCart()">Add to Cart</button>
+              <button *ngIf="removeCart" class="btn btn-primary flex-fill" (click)="RemoveFromCart(productData.id)">Remove to Cart</button>
+            <button class="btn btn-success flex-fill" >Buy Now</button>
           </div>
         </div>
       </div>

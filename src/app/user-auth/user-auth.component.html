@@ -45,13 +45,19 @@
       <form [formGroup]="userLoginForm" (submit)="userlogin(userLoginForm.value)">
         <div class="mb-3">
           <label class="form-label">Email</label>
-          <input type="email" class="form-control" name="email" placeholder="Enter Email" formControlName="email" required>
+          <input type="email" class="form-control" name="email" placeholder="Enter Email" formControlName="email" >
+          <div *ngIf="userLoginForm.get('email')?.invalid && userLoginForm.get('email')?.touched" class="text-danger">
+            Email is required.
+          </div>
         </div>
         <div class="mb-3">
           <label class="form-label">Password</label>
-          <input type="text" class="form-control" name="password" placeholder="Enter Password" formControlName="password" required>
+          <input type="text" class="form-control" name="password" placeholder="Enter Password" formControlName="password" >
+          <div *ngIf="userLoginForm.get('password')?.invalid && userLoginForm.get('password')?.touched" class="text-danger">
+            Password is required.
+          </div>
         </div>
-        <button class="btn btn-success w-100 mb-2" >Login</button>
+        <button class="btn btn-success w-100 mb-2"[disabled]="userLoginForm.invalid || !userLoginForm.touched">Login</button>
       </form>
       <div class="text-center mt-2">
         <a class="text-decoration-none text-success" (click)="hideLogin()">Don't have an account? <b>Sign Up</b></a>

@@ -195,14 +195,39 @@
       "id": 2
     }
   ],
-  "cart": {
-    "productName": "Samsung Galaxy M05",
-    "productPrice": "6,249",
-    "productColor": "Blue",
-    "productDescription": "Mobile",
-    "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg",
-    "productquantity": 5,
-    "userId": 2,
-    "productId": "c5b5"
-  }
+  "cart": [
+    {
+      "id": 1,
+      "productName": "Samsung",
+      "productPrice": "27000",
+      "productColor": "black",
+      "productDescription": "samsaung",
+      "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*",
+      "productquantity": 1,
+      "productId": "d7fa",
+      "userId": 123
+    },
+    {
+      "productName": "Samsung s24",
+      "productPrice": "39000",
+      "productColor": "Purple",
+      "productDescription": "mobile",
+      "productImg": "https://media.extra.com/s/aurora/100317104_800/Samsung-Galaxy-S22%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*",
+      "productquantity": 1,
+      "userId": 2,
+      "productId": "a4d8",
+      "id": 2
+    },
+    {
+      "productName": "Samsung Galaxy M05",
+      "productPrice": "6,249",
+      "productColor": "Blue",
+      "productDescription": "Mobile",
+      "productImg": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg",
+      "productquantity": 5,
+      "productId": "c5b5",
+      "userId": null,
+      "id": 3
+    }
+  ]
 }

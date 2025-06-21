@@ -43,6 +43,7 @@
     </div>
     <div *ngIf="isuseraccount">
       <form [formGroup]="userLoginForm" (submit)="userlogin(userLoginForm.value)">
+         <p class="error-p">{{authError}}</p>
         <div class="mb-3">
           <label class="form-label">Email</label>
           <input type="email" class="form-control" name="email" placeholder="Enter Email" formControlName="email" >

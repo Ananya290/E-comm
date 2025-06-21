@@ -53,34 +53,63 @@ export class ProductComponent implements OnInit {
       this.quantity += 1;
     }
   }
-  AddToCart() {
-    if (this.productData) {
-      this.productData.productquantity = this.quantity;
-      if (!localStorage.getItem('user')) {
-        this.productservice.localAddToCart(this.productData);
-        this.removeCart = true;
-      } else {
-        let user = localStorage.getItem('user');
-        let parsedUser = user && JSON.parse(user);
-        console.log('Parsed user:', parsedUser);
-        let userId = parsedUser && parsedUser[0] && parsedUser[0].id;
-        console.log('User ID:', userId);
-        let cartData:cart={
-          ...this.productData,userId,productId:this.productData.id    
-           }
-        delete (cartData as any).id;
-        console.warn(cartData)
-        this.productservice.addToCart(cartData).subscribe((result)=>{
-          console.log("addToCArt result ",result)
-          if(result){
-            alert('product is added in cart')
-          }
-        })
+  // AddToCart() {
+  //   if (this.productData) {
+  //     this.productData.productquantity = this.quantity;
+  //     if (!localStorage.getItem('user')) {
+  //       this.productservice.localAddToCart(this.productData);
+  //       this.removeCart = true;
+  //     } else {
+  //       let user = localStorage.getItem('user');
+  //       let parsedUser = user && JSON.parse(user);
+  //       console.log('Parsed user:', parsedUser);
+  //       let userId = parsedUser && parsedUser[0] && parsedUser[0].id;
+  //       console.log('User ID:', userId);
+  //       let cartData:cart={
+  //         ...this.productData,userId,productId:this.productData.id    
+  //          }
+  //       delete (cartData as any).id;
+  //       console.warn(cartData)
+  //       this.productservice.addToCart(cartData).subscribe((result)=>{
+  //         console.log("addToCArt result ",result)
+  //         if(result){
+  //           alert('product is added in cart')
+  //         }
+  //       })
        
         
+  //     }
+  //   }
+  // }
+  AddToCart() {
+  if (this.productData) {
+    this.productData.productquantity = this.quantity;
+    if (!localStorage.getItem('user')) {
+      this.productservice.localAddToCart(this.productData);
+      this.removeCart = true;
+    } else {
+      let user = localStorage.getItem('user');
+      let parsedUser = user && JSON.parse(user);
+      let userId = parsedUser && parsedUser[0] && parsedUser[0].id;
+      let productId = this.productData.id;
+      if (!productId) {
+        alert('Product ID is missing!');
+        return;
       }
+      let cartData: cart = {
+        ...this.productData,
+        userId,
+        productId
+      };
+      delete (cartData as any).id;
+      this.productservice.addToCart(cartData).subscribe((result) => {
+        if (result) {
+          alert('Product is added in cart');
+        }
+      });
     }
   }
+}
   RemoveFromCart(productID: number) {
     this.productservice.removeItemFromCart(productID);
     this.removeCart = false;

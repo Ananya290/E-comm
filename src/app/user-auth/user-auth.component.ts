@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserserviceService } from '../userservices/userservice.service';
-import { logIn, SignUp } from '../../datatype';
+import { cart, logIn, product, SignUp } from '../../datatype';
+import { ProductServiceService } from '../services/product-service.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -14,8 +15,9 @@ export class UserAuthComponent implements OnInit {
   includeNumbers: boolean = true;
   includeCharacters: boolean = true;
   isuseraccount :boolean =false;
+  authError : string = " ";
 
-  constructor(private fb: FormBuilder , private userService :UserserviceService){
+  constructor(private fb: FormBuilder , private userService :UserserviceService, private productService :ProductServiceService){
     
   }
 
@@ -75,7 +77,15 @@ export class UserAuthComponent implements OnInit {
   }
   userlogin(data :logIn){
     this.userService.userLogin(data);
-    console.log("userlogin");
+    this.userService.isLoginerror.subscribe((result)=>{
+      console.warn(result);
+      if(result){
+        this.authError="User Not Found"
+      }else{
+        this.localCartToRemoteCart()
+      }
+      
+    })
     
   }
   hideLogin(){
@@ -83,6 +93,35 @@ export class UserAuthComponent implements OnInit {
   }
   hideSignUp(){
     this.isuseraccount=true;
+  }
+  localCartToRemoteCart(){
+    let data = localStorage.getItem('localCart');
+    if(data){
+      let cardDataList:product[] = JSON.parse(data);
+      let user = localStorage.getItem('user');
+      let userparse = user && JSON.parse(user)
+      let userId = userparse && userparse[0].id;
+      
+      cardDataList.forEach((productData :product,index)=>{
+        let cartData : cart={
+          ...productData,
+          productId:productData.id,
+          userId
+        };
+        delete (cartData as any).id;
+       setTimeout(()=>{
+          this.productService.addToCart(cartData).subscribe((result)=>{
+          if(result){
+            console.warn("Item stored in DB");
+          }
+        })
+        if(cardDataList.length === index+1){
+          localStorage.removeItem('localCart')
+        }
+       },500)
+      })
+    }
+
   }
 
 }
